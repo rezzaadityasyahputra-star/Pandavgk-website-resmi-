@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANDAVGK - Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Nama Web di Kiri Atas */
+        .header {
+            width: 100%;
+            position: absolute;
+            top: 30px;
+            left: 40px;
+        }
+
+        .web-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Kontainer Tabel */
+        .content-wrapper {
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Styling Tabel/Card */
+        .glass-table {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
+        }
+
+        .glass-table:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 198, 255, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .table-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #00c6ff;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(0, 198, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .table-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        /* Tombol Download */
+        .btn-download {
+            padding: 12px 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .btn-download:hover {
+            filter: brightness(1.2);
+            box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4);
+            letter-spacing: 1px;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive untuk HP */
+        @media (max-width: 768px) {
+            .header { text-align: center; left: 0; }
+            .content-wrapper { margin-top: 80px; }
+            body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="web-name">PANDAVGK</h1>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="glass-table">
+            <div>
+                <h2 class="table-title">VGK KIDS BARAT</h2>
+                <div class="table-text">
+                    RATUSAN VIDEO VGK BARAT MENIKMATI ANDA DALAM KESEHARIAN COYLI ANDA WKWK (WORKING).
+                </div>
+            </div>
+            <a href="#" class="btn-download">DOWNLOAD</a>
+        </div>
+
+        <div class="glass-table">
+            <div>
+                <h2 class="table-title">VGK KIDS DOUYIN</h2>
+                <div class="table-text">
+                    RATUSAN VIDEO VGK CHINA MENIKMATI ANDA DALAM KESEHARIAN COYLI ANDA HAHAHA (EROR).
+                </div>
+            </div>
+            <a href="#" class="btn-download">DOWNLOAD</a>
+        </div>
+
+        <div class="glass-table">
+            <div>
+                <h2 class="table-title">VGK LOKALS</h2>
+                <div class="table-text">
+                    RATUSAN VIDEO VGK CHINA MENIKMATI ANDA DALAM KESEHARIAN COYLI ANDA WKWK (EROR).
+                </div>
+            </div>
+            <a href="#" class="btn-download">DOWNLOAD</a>
+        </div>
+    </div>
+
+</body>
+</html>
